@@ -75,8 +75,11 @@ public class ContactsActivity extends AppCompatActivity {
         // notify adapter
         mAdapter.notifyItemInserted(0);
 
+        // scroll to position
+        rvContacts.scrollToPosition(0);
+
         // display Snackbar
-        Snackbar.make(findViewById(android.R.id.content), R.string.snackbar_text, Snackbar.LENGTH_LONG)
+        Snackbar.make(rvContacts, R.string.snackbar_text, Snackbar.LENGTH_LONG)
                 .setAction(R.string.snackbar_action, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
